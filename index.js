@@ -233,6 +233,9 @@ console.log(artists[2]);
 
 /* Task 2: There is a typo in your dataset 😱 The 9th artist, Vincent Van Gogh is currently Vincent Van Dough. Use an array method to fix this issue and console.log() to check your work. */
 
+artists[8].name = "Vincent Van Gogh";
+console.log(artists[8]);
+
 /* Task 3: Create a function called `getArtistByIndex` that takes two arguments:
  *     (1) artists array
  *     (2) a number which is the desired index in the array.
@@ -243,7 +246,11 @@ console.log(artists[2]);
  */
 function getArtistByIndex(array, index) {
   /* code here */
+  let artistName = array[index].name;
+  return `The artist at index ${index} is ${artistName}.`;
 }
+
+console.log(getArtistByIndex(artists, 0));
 
 /**
 
