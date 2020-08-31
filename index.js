@@ -281,7 +281,8 @@ console.log(get20s(artists));
  */
 function removeArtist(array, index) {
   /* code here */
-  return array.splice(index, 1);
+  array.splice(index, 1);
+  return array.length;
 }
 
 /**
