@@ -279,8 +279,9 @@ console.log(get20s(artists));
  *
  * Note that sucessfully invoking this function multiple times without refreshing your browser will continuously remove artists from the array until there are none left. If you refresh your browser, the data will reset.
  */
-function removeArtist(/*code here*/) {
+function removeArtist(array, index) {
   /* code here */
+  return array.splice(index, 1);
 }
 
 /**
@@ -296,9 +297,23 @@ bio: Add 1-2 sentences (or use lorem ipsum)
 
 At the end, this function should return the new array with information added"*/
 
-function addArtist(/* Code here */) {
+function addArtist(array, artist) {
   /* Code here */
+  array.push(artist);
+  return array;
 }
+
+let me = {
+  id: 20,
+  name: "Peter Van Straaten",
+  years: "1988 - 2020",
+  genre: "Web Design",
+  nationality: "Canadian",
+  bio:
+    "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Consequuntur cumque quam omnis, tempore soluta, voluptatibus nobis veniam hic laudantium quod placeat magni. Asperiores architecto quidem voluptatibus, et expedita officia ut.",
+};
+
+console.log(addArtist(artists, me));
 
 /* Task 7: Create a function called lotsOfArt() that takes one argument: 
 
