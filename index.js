@@ -359,6 +359,9 @@ The function should console.log 50 chunks of HTML code that match the structure 
 
 function getHTML(data) {
   /* Code here */
+  for (let prop in data) {
+    console.log(`<div class = \"${prop}\">${data[prop]}</div>`);
+  }
 }
 
 /* STRETCH 2: Create a function called `randomize` that takes a data array as an argument and returns a the same array in a randomized order. */
